@@ -4,7 +4,7 @@ echo "Updating package list and installing dependencies..."
 sudo apt update
 
 # Install essential dependencies
-sudo apt install -y curl wget unzip golang
+sudo apt install -y curl wget unzip golang amass
 
 # Install whois
 echo "Installing whois..."
