@@ -35,7 +35,7 @@ assetfinder $domain | grep $domain >> $subdomain_path/found.txt
 # Get subdomains with assetfinder
 echo -e "${RED} [+] Running amass... ${RESET}"
 amass enum -d $domain > $subdomain_path/amass_output.txt
-cat amass_output.txt | grep $domain | cut -d ' ' -f1 >> found.txt
+cat $subdomain_path/amass_output.txt | grep $domain | cut -d ' ' -f1 >> $subdomain_path/found.txt
 
 # Sort and remove duplicates, use httprobe to find the alive subdomains
 echo -e "${RED} [+] Finding alive subdomains... ${RESET}"
